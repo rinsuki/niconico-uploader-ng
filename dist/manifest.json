@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "niconico uploader ng",
+    "description": "ニコニコ動画の将棋盤ランキングにユーザーNG機能を提供します",
+    "version": "0.1.0",
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.nicovideo.jp/ranking"],
+            "js": [
+                "js/content-scripts/add-uploader-attr.js",
+                "js/content-scripts/generate-css.js"
+            ]
+        }
+    ],
+    "applications": {
+        "gecko": {
+            "id": "niconico-uploader-ng@addons.rinsuki.net"
+        }
+    },
+    "permissions": [
+        "menus",
+        "storage",
+        "unlimitedStorage",
+        "https://www.nicovideo.jp/ranking"
+    ]
+}

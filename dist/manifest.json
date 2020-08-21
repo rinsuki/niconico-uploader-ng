@@ -8,7 +8,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://www.nicovideo.jp/ranking"],
+            "matches": ["https://www.nicovideo.jp/ranking", "https://www.nicovideo.jp/ranking?*"],
             "js": [
                 "js/content-scripts/add-uploader-attr.js",
                 "js/content-scripts/generate-css.js"

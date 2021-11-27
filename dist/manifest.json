@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "niconico uploader ng",
     "description": "ニコニコ動画の将棋盤ランキングにユーザーNG機能を提供します",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "background": {
         "scripts": ["js/background.js"]
     },

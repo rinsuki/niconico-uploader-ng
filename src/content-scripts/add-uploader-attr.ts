@@ -16,7 +16,7 @@ interface Lane {
 
     const observer = new MutationObserver(() => {
         for (const video of appJSON.lanes.flatMap(l => l.videoList)) {
-            const elms = document.querySelectorAll(`a[href="/watch/${video.id}"]`)
+            const elms = document.querySelectorAll(`a[href="https://www.nicovideo.jp/watch/${video.id}"]`)
             for (const elm of elms) {
                 const parent = elm.parentElement
                 if (parent == null) continue

@@ -12,7 +12,7 @@ browser.menus.create({
         // 投稿者情報を取得
         const res: {webextUploaderId?: string, webextUploaderType?: string} = await browser.tabs.executeScript(tab.id, {
             frameId: info.frameId,
-            code: `Object.assign({}, document.querySelector(${JSON.stringify(`a[href^="/watch/${videoId}"]`)}).parentElement.dataset)`
+            code: `Object.assign({}, document.querySelector(${JSON.stringify(`a[href^="https://www.nicovideo.jp/watch/${videoId}"]`)}).parentElement.dataset)`
         }).then(o => o[0])
         console.log(res)
         if (res.webextUploaderId == null || res.webextUploaderType == null) return console.log("res invalid")
